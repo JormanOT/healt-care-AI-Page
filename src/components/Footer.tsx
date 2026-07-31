@@ -1,4 +1,10 @@
-const footerLinks = ['Home', 'Services', 'About', 'Gallery', 'Contact'];
+const footerLinks = [
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Services', href: '#services' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Contact', href: '#contact' },
+];
 
 export default function Footer() {
   return (
@@ -22,12 +28,11 @@ export default function Footer() {
           <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
             {footerLinks.map((link) => (
               <a
-                key={link}
-                href="#"
-                onClick={(e) => e.preventDefault()}
+                key={link.label}
+                href={link.href}
                 className="text-sm font-semibold text-white/70 hover:text-white transition-colors duration-200"
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </nav>

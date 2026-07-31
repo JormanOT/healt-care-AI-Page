@@ -14,7 +14,13 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  const navLinks = ['Home', 'About', 'Services', 'Gallery', 'Contact'];
+  const navLinks = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Services', href: '#services' },
+    { label: 'Gallery', href: '#gallery' },
+    { label: 'Contact', href: '#contact' },
+  ];
 
   return (
     <>
@@ -83,17 +89,14 @@ export default function Navbar() {
           <div className="flex flex-col justify-center h-full px-8 gap-1">
             {navLinks.map((link, i) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className={`text-4xl font-bold text-black hover:text-neutral-500 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] ${mobileOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
                   }`}
                 style={{ transitionDelay: mobileOpen ? `${100 + i * 60}ms` : '0ms' }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setMobileOpen(false);
-                }}
+                onClick={() => setMobileOpen(false)}
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>

@@ -32,6 +32,7 @@ export default function Section1() {
 
   return (
     <section
+      id="home"
       ref={(el) => {
         sectionRef.current = el;
         revealRef.current = el;
