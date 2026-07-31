@@ -83,9 +83,11 @@ export default function Section1() {
           </h1>
         </div>
 
-        {/* Bottom-right text */}
-        <div className="absolute bottom-6 right-4 md:bottom-10 md:right-8 text-white text-xs md:text-sm font-semibold z-10">
-          Free Consultation
+        {/* Right side CTA button */}
+        <div className="absolute top-0 bottom-0 right-4 md:right-8 flex items-center z-10">
+          <button className="px-5 py-3 md:px-8 md:py-5 bg-white rounded-full text-black text-base md:text-xl font-bold hover:scale-105 transition-transform">
+            Free Consultation
+          </button>
         </div>
       </MaskedCard>
     </section>
