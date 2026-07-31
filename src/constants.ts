@@ -22,3 +22,16 @@ export const services: Service[] = [
   { name: 'Teeth\nWhitening', num: '03', active: false },
   { name: 'Dental\nImplants', num: null, active: false },
 ];
+
+export interface GalleryImage {
+  src: string;
+  label: string;
+}
+
+export const galleryImages: GalleryImage[] = [
+  { src: HERO_IMAGE, label: 'Smile Makeover' },
+  { src: SECTION2_IMAGE, label: 'Teeth Whitening' },
+  { src: SECTION3_IMG1, label: 'Dental Implants' },
+  { src: SECTION3_IMG2, label: 'Porcelain Veneers' },
+  { src: SECTION3_BG, label: 'Complete Restoration' },
+];
